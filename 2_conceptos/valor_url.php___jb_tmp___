@@ -1,0 +1,17 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Marie
+ * Date: 08/03/2019
+ * Time: 08:44 AM
+ */
+
+    $nombre = "Marie";
+
+echo $nombre. "<br><br>";
+
+var_dump($nombre);
+
+$edad = 18;
+
+var_dump($edad);
