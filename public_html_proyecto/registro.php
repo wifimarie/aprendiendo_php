@@ -1,3 +1,14 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login_style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registro </title>
+</head>
+<body>
 <?php
 include 'config.php';
 
@@ -16,7 +27,7 @@ else {
 }
 ?>
 
-<form action="registro.php" method="post">
+<form  action="registro.php" method="post">
     <label>Nombre</label>
     <input type="text" name="u_name" value=""><br />
     <label>Correo electr&oacute;nico</label>
@@ -24,3 +35,7 @@ else {
     <label>Contrase&ntilde;a</label>
     <input type="password" name="u_pass" value=""><br />
     <input type="submit" name="u_btn" value="sign up"><br />
+    <a href="login.php">Iniciar sesi&oacute;n</a>
+</form>
+</body>
+</html>
