@@ -12,7 +12,8 @@ $saludo = "Bienvenidos a mi sitio web kulturizate";
 </head>
 <body>
     <div class="container">
-    <h1> <?= $saludo; ?></h1> <!-- < ?= inidica que es un echo de php -->
+    <h1> <?= $saludo; ?></h1> <!-- < ?= indica que es un echo de php -->
+     <a href="login.php">Iniciar sesion uwu </a>
 </div>
 </body>
 </html>
