@@ -11,7 +11,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-image: url("https://images.unsplash.com/photo-1525762867061-21c9fb70b15a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
+    background: url("https://asiaexchangeorg.r.worldssl.net//wp-content/uploads/2018/05/ciaran-o-brien-752246-unsplash.jpg");
 }
 
 .box {
