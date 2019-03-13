@@ -92,8 +92,8 @@ a:hover {
 <!-- form-->
 <form class="box" action="login.php" method="post">
 <h1> Iniciar sesión </h1>
-<input type="text" autofocusname="u_email" placeholder="correo" required> 
-<input type="password" autofocus name="u_pass" placeholder="contraseña" required> 
+<input type="text" autofocus name="u_email" placeholder="correo" required> 
+<input type="password"  name="u_pass" placeholder="contraseña" required> 
 <input type="submit" name="u_btn" placeholder="sign in"> 
 <a href="registro.php">Registrarse</a>
     </form> 

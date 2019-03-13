@@ -7,10 +7,10 @@
 	"settings": {
 		"breadcrumbs.enabled": true,
 		"editor.cursorSmoothCaretAnimation": true,
-		"editor.fontSize": 16,
+		"editor.fontSize": 40,
 		"editor.formatOnSave": true,
 		"editor.formatOnType": true,
-		"editor.lineHeight": 32,
+		"editor.lineHeight": 48,
 		"editor.smoothScrolling": true,
 		"editor.tabCompletion": "on",
 		"emmet.triggerExpansionOnTab": true,

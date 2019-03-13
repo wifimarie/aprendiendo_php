@@ -1,0 +1,25 @@
+/* Ocultar el div molesto de 000webhost */
+body a[title] {
+    display: none;
+}
+
+body {
+    transition: background ease .3s;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.text-ulturizate {
+    color: #4285F4; 
+}
+.container {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
