@@ -1,4 +1,5 @@
 <?php
+$titulo = "Kulturizate | Iniciar Sesion";
 var_dump($_GET); 
 echo "<br>";
 var_dump($_POST); 

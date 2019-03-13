@@ -1,4 +1,5 @@
 <?php
+$titulo = "Kulturizate | Registrate";
 require "app/vistas/registro.vistas.php";
 include 'config.php';
 

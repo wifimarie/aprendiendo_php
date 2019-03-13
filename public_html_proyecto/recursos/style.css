@@ -1,0 +1,18 @@
+body a[title] {
+    display: none;
+
+} 
+
+#login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+#login form {
+    padding: 30px 15px;
+    border: solid 1px white;
+    border-radius: 15px;
+    background: white;
+    color: black;
+}
