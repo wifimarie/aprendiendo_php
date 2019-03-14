@@ -18,7 +18,7 @@ $usuarios = [
 
 
 
-require 'config.php'; // archivito con las configuraciones de la base de datos.
+require 'app/conexion.php'; // archivito con las configuraciones de la base de datos.
 
 require "app/vistas/registro.vistas.php";
 

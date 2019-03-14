@@ -1,4 +1,4 @@
-<?php
+<?php //esto se hace una sola vez
 $host = "127.0.0.1";
 $dbname = "marie_database";
 $user = "root";
@@ -51,8 +51,8 @@ if (isset($_POST['inputName'])){
         $comando = $conexion->prepare($sqlInsert);
     
         // 2. Ejecutarlo
-        $respueta = $comando->execute($datosUsuarios);
-        if ($respueta == true) {
+        $respuesta = $comando->execute($datosUsuarios);
+        if ($respuesta == true) {
             echo "<script>alert('Datos insertados correctamente')</script>";
             //redirecciona a la pagina principal
             header("Location: /aprendiendo_php/public_html_proyecto/");
