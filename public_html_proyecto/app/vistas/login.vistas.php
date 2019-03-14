@@ -1,5 +1,55 @@
-<?php require '_head.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <!-- Incluir los estilos -->
+<link rel="stylesheet" href="recursos/css/style.css">
+    <link rel="stylesheet" href="recursos/css/bootstrap.css">
+    <link rel="shortcut icon" href="recursos/img/icon.ico" type="image/ico">   
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <meta name="theme-color" content="#0FB2EB";> <!-- color del meta en google chrome--> 
+    <title> <?php echo $titulo; ?></title>
+<style>
+     body {
+            margin: 0;
+            padding: 0;
+            background-image: url("recursos/img/love.jpg");
+            height: 100vh;
+            background-size: cover;
+        }
+        .container {
+           justify-content: center; 
+        }
+        
+#login {
+    width: 450px;
+    padding: 60px;
+    align-content: center;
+    justify-content: center;
+    background: #f9fafc;
+    text-align: center;
+    border-radius: 10px 10px 10px 10px;
+}
 
+a {
+    color: #313131;
+    transition: ease all 0.3s;
+}
+a:hover {
+    color: #39a0bd;
+    transition: ease all 0.3s;
+}
+
+.fondo-f {
+    opacity: 5px;
+    background: #313131;
+    padding: 5px;
+    width: 100%;
+}
+    </style>
 </head>
 <body>
 
@@ -8,18 +58,26 @@
 <div class="row">
     <div class="col-md-4">
 
-  <h3><i class="fab fa-kickstarter-k sexy">ulturizate</i></h3>
+    
 <!-- form-->
-<form class="box" action="login.php" method="post">
-<h1> Iniciar sesión </h1>
-<input class="form-control mb-3" type="text" name="u_email" placeholder="correo"> 
-<input class="form-control mb-3" type="password" name="u_pass" placeholder="contraseña"> 
+<form id="login" class="box" action="login.php" method="post">
+
+<h1><a href="../index.php" class="text-kulturizate text-decoration-none "><i class="fab fa-kickstarter-k pl-0"></i><b>ulturizate</b></a></h1>
+                    <hr>
+                    <h4 class="mb-4">Regístrate</h4>
+<input class="form-control mb-3" type="text" name="u_email" placeholder="correo" required autofocus> 
+<input class="form-control mb-3" type="password" name="u_pass" placeholder="contraseña" required> 
 <input class="btn btn-block- btn-outline-dark mb-2" type="submit" name="u_btn" placeholder="sign in"> 
 <br><span>¿No tienes tu cuenta? </span><a class="btn btn-dark" href="registro.php">Regístrate</a>
     </form> 
  </div>
 </div>
 </div> <!-- fin del container-->
+<div class="row">
+        <div class="col-md-12 mt-3 text-center fondo-f">
+            <span style="color: white;"> <b>&copy;marie 2019</b></span>
+        </div>
+    </div>
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

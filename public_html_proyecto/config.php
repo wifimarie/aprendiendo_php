@@ -1,6 +1,6 @@
 <?php
 $host = "127.0.0.1";
-$dbname = "database_marie";
+$dbname = "marie_database";
 $user = "marie";
 $password = "aresyyoforever";
 $opciones = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
@@ -14,9 +14,7 @@ try {
     $comando->execute();
     // 4. Traer los datos
     $usuarios = $comando->fetchAll(PDO::FETCH_ASSOC);
-    echo "<pre>";
-    var_export($usuarios);
-    echo "</pre>";
+   
 } catch(PDOException $e) {
     echo $e->getMessage();
 }
