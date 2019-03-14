@@ -13,147 +13,146 @@
     <meta name="theme-color" content="#0FB2EB";> <!-- color del meta en google chrome--> 
     <title> <?php echo $titulo; ?></title>
     <style>
-    .slider {
-    background: url("https://asiaexchangeorg.r.worldssl.net//wp-content/uploads/2018/05/ian-valerio-594879-unsplash.jpg");
-    height: 50vh;
-    background-size: cover; /* esto es para que se adapte al dispositivo */
-    background-position: center; /* esto es para posicionarlo centralizadamente */
-}
-
-.box {
-    width: 500px;
-    padding: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-   
-}
-
-h1 {
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
+    /* Ocultar el div molesto de 000webhost */
+body a[title] {
+    display: none;
     
 }
-.about {
-    background: url("https://asiaexchangeorg.r.worldssl.net//wp-content/uploads/2018/05/ian-valerio-594879-unsplash.jpg");
-    height: -100vh;
-    background-size: cover;
-    background-position: center;
-    text-align: center;
+.bg {
+    background-color: #edb88b;
 }
-.bb {
-    padding: 5px;
-    font-size: 12px;
+body {
+    transition: background ease .3s;
+}
+.fondo-kiki {
+    background: url('https://i.ibb.co/m9w9bLC/logo.png'); /* https://i.ibb.co/m9w9bLC/logo.png | https://i.ibb.co/m9zprRc/parejita.png | https://i.ibb.co/gjVxfSq/parejota.png | https://i.ibb.co/bdsGndw/sexy.png   */
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: right;
 }
 
+#bienvenido {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.textito {
+    width: 50%;
+    padding: 10px;
+    margin: 5px;
+    text-align: justify;
+}
+h1 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.social-icons {
+    font-size: 20px;
+}
+.social-icons a {
+    color: #313131;
+    transition: ease all 0.30s;
+}
+.social-icons a:hover {
+    color: #39a0bd;
+    transition: ease all 0.30s;
+}
+.nav-link,.nav-link-active {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+.nav-link,.nav-link-active a {
+    color: black;
+    transition: ease all 0.40s;
+}
+.nav-link,.nav-link-active a:hover {
+    color: #39a0bd;
+    transition: ease all 0.40s;
+}
+
+.logo {
+    justify-content: center;
+    font-size: 21px;
+    color: #BC0C0C;
+    
+}
     </style>
 </head>
 <body>
-
-    <div class="container-fluid">   
-
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" href="#">KULTURIZATE.</a>
-
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item active">
-            <a class="nav-link" href="#"><i class="fas fa-home bb"></i>Inicio <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="login.php"><i class="fas fa-sign-in-alt bb"></i>Inicia Sesión</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="registro.php"><i class="fas fa-user bb"></i>Registrate</a>
-        </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Busca algo en particular..." aria-label="Search">
-        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Buscar</button>
-        </form>
-    </div>
-    </nav>
-    </div> <!--aqui termina el container-fluid del navbar-->
-    <!--fondo de la pagina como es fluid cubre TODA LA PAGINA: slider es el nombre en sí del class-->
-    <section class="container-fluid slider d-flex justify-content-center align-items-center col-md-12">   
-    <div class="box">
-    <h1 class="display-4 text-center text-black">kulturizate</h1>  <!---Titulo con display para usar menos css -->
-    </div>
-    </section>
-    <br>
-    <br>
-    <div class="container-fluid">
-        
-        <div class="col-12 sm-12">
-    <div class="card-deck">
-    <div class="card">
-        <img src="recursos/img/korea.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">Bienvenida a Korea</h5>
-        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, iusto!</p>
-        <a class="btn btn-outline-dark" href="#">leer más</a>
-        </div>
-        <div class="card-footer">
-        <small class="text-muted">Publicado hace 3 minutos</small>
-        </div>
-    </div>
-    <div class="card">
-        <img src="recursos/img/churros.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">Kulturizate con nosotros</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-        <a class="btn btn-outline-dark" href="#">leer más</a>
-        </div>
-        <div class="card-footer">
-        <small class="text-muted">Publicado hace 3 minutos</small>
-        </div>
-    </div>
-    <div class="card">
-        <img src="recursos/img/soju.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">¿Kimchi o Tteokbokki?</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-        <a class="btn btn-outline-dark" href="#">leer más</a>
-        </div>
-        
-        <div class="card-footer">
-        <small class="text-muted">Publicado hace 3 minutos</small>
-        </div>
-    </div>
-    <div class="card">
-        <img src="recursos/img/love.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">Pokis y amor...</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-        <a class="btn btn-outline-dark" href="#">leer más</a>
-        </div>
-        
-        <div class="card-footer">
-        <small class="text-muted">Publicado hace 3 minutos</small>
-        </div>
-    </div>
-    </div> <!-- fin container cards -->
-
-
-    <br>
-    <br>
-
-    <section class="container-fluid d-flex justify-content-center align-items-center col-md-12">   
-    <div class="about">
-    <img src="recursos/img/cyberpunk.jpg" class="rounded-circle" width="150px" height="150px"/> <!---Titulo con display para usar menos css -->
-    <p> Conoce a Corea del Sur ♥</p>
-    </div>
-    </section>
-
-    <!-- scripts -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ <div class="bg"></div>
+    <div class="container fondo-kiki"> 
+        <div class="row">
+        <div class="col-md-4">
+        <!-- menu link nav1-->
+        <ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">KULTURIZATE</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="blog.php">BLOG</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="registro.php">REGISTRO</a>
+  </li>
+  
+</ul>
+</div>
+<div class="col-md-4">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <!-- LIFE HACK xd-->
+<i class="fab fa-kickstarter-k mt-1 d-inline-block align-top logo"></i><span style="font-size: 20px;font-family: 'Montserrat', sans-serif;color:#BC0C0C;"><b>ULTU</span><span style="font-size: 20px;font-family: 'Montserrat', sans-serif;color: #04479C;">RIZ</span><span style="font-size: 20px;font-family: 'Montserrat', sans-serif;">ATE</b></span>
+</div>
+<!-- menu nav2-->
+<div class="col-md-4">
+<ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link" href="faq.php">FAQ</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="contact.php">CONTACTO</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="login.php">ENTRAR</a>
+  </li>
+</ul>
+</div>
+  </div>    
+        <section id="bienvenido">
+            <h1>Bienvenidos a <span style="color: #39a0bd;" class="d-inline-block text-ulturizate"><i class="fab fa-kickstarter-k"></i></i><b>ulturizate</b></span></h1>
+            <p class="lead textito">Disfruta de la chercha y posts acerca de la cultura coreana, ¿no tienes idea alguna sobre su origen y/o características?
+                necesitas quedarte y pasarte por el blog. ¿No te has registrado aun? ¿Qué esperas?
+            </p>
+            <br>
+            <div>
+                <a class="btn btn-outline-dark mt-1" href="login.php"><i class="fas fa-caret-right p-1"></i>Iniciar sesión</a>
+                <span class="m-1">o</span>
+                <a class="btn btn-primary mt-1" href="registro.php"><i class="fas fa-sign-in-alt p-1"></i>Registrarse</a>
+            </div>
+        </section>
     
-    </body>
-    </html>
+<!-- barra de social sites-->
+    <div class="col-md-4">
+    <div class="social-icons">
+        <a href="" class="social-icon pl-3 mt-3"> <i class="fab fa-twitter"></i></a>
+        <a href="" class="social-icon pl-3 mt-3"> <i class="fab fa-instagram"></i></a>
+        <a href="" class="social-icon pl-3 mt-3"> <i class="fab fa-facebook-f"></i></a>
+        <a href="" class="social-icon pl-3 mt-3"> <i class="fab fa-youtube"></i></a>
+        <a href="" class="social-icon pl-3 mt-3"> <i class="fab fa-linkedin-in"></i></a>
+        <a href="" class="social-icon pl-3 mt-3"> <i class="fab fa-google-plus-g"></i></i></a>
+</div>
+ </div>
+</div>
+     <!-- Incluir JS de Bootstrap -->
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html> 
