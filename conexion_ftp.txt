@@ -1,0 +1,12 @@
+server files.000webhost.com
+db marie_database
+username daydreammarie
+password elviragomez02
+puerto: 21
+
+-------- webhost database manager
+nombre id8907611_proyecto_db
+username id8907611_daydreammarie
+password: elviragomez02
+mi blog:
+daydreammarie.000webhostapp.com

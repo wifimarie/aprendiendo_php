@@ -14,16 +14,10 @@ $usuarios = [
             'username' =>'jamilie'
 ]
 ];
+//enlazando base de datos con los campos del registro
 
-// foreach 
-/*
-foreach($usuarios as $usuario) :
 
-    echo"<ul>";
-    echo "<li>{$usuario['nombre']} {$usuario['username']}</li>";
-    echo"<ul>";
-endforeach;
-*/
+
 require 'config.php'; // archivito con las configuraciones de la base de datos.
 
 require "app/vistas/registro.vistas.php";
