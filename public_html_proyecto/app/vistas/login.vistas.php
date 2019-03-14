@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="recursos/img/icon.ico" type="image/ico">   
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800" rel="stylesheet"> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <meta name="theme-color" content="#0FB2EB";> <!-- color del meta en google chrome--> 
+    <meta name="theme-color" content="#fc5864";> <!-- color del meta en google chrome--> 
     <title> <?php echo $titulo; ?></title>
 <style>
      body {
