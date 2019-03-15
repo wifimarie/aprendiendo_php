@@ -64,7 +64,7 @@ a:hover {
 
 <h1><a href="../index.php" class="text-kulturizate text-decoration-none "><i class="fab fa-kickstarter-k pl-0"></i><b>ulturizate</b></a></h1>
                     <hr>
-                    <h4 class="mb-4">Regístrate</h4>
+                    <h4 class="mb-4">Inicia sesión</h4>
 <input class="form-control mb-3" type="text" name="inputUser" placeholder="usuario" required autofocus> 
 <input class="form-control mb-3" type="password" name="inputPassword" placeholder="contraseña" required> 
 <input class="btn btn-block- btn-outline-dark mb-2" type="submit" name="u_btn" placeholder="sign in"> 

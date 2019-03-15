@@ -1,7 +1,7 @@
 <?php
 $titulo = "Kulturizate | Registrate";
 
-
+session_start();
 $usuarios = [
    
     0 => ['nombre' => 'marie',

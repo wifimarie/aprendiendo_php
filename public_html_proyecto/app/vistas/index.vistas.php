@@ -75,7 +75,7 @@ h1 {
 .logo {
     justify-content: center;
     font-size: 21px;
-    color: #BC0C0C;
+    color: black;
     
 }
     </style>
@@ -101,7 +101,7 @@ h1 {
 </div>
 <div class="col-md-4">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <!-- LIFE HACK xd-->
-<i class="fab fa-kickstarter-k mt-1 d-inline-block align-top logo"></i><span style="font-size: 20px;font-family: 'Montserrat', sans-serif;color:#BC0C0C;"><b>ULTU</span><span style="font-size: 20px;font-family: 'Montserrat', sans-serif;color: #04479C;">RIZ</span><span style="font-size: 20px;font-family: 'Montserrat', sans-serif;">ATE</b></span>
+<i class="fab fa-kickstarter-k mt-1 d-inline-block align-top logo"></i><span style="font-size: 20px;font-family: 'Montserrat', sans-serif;color:black;"><b>UL</span><span style="font-size: 20px;font-family: 'Montserrat', sans-serif;color: #04479C;"><span style="font-size: 20px;font-family: 'Montserrat', sans-serif;color: darkred;">TU</span>RIZ</span><span style="font-size: 20px;font-family: 'Montserrat', sans-serif;">ATE</b></span>
 </div>
 <!-- menu nav2-->
 <div class="col-md-4">
