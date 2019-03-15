@@ -14,14 +14,17 @@ if (isset($_POST['inputEmail'])) {
     // Preparar el query
     $sql = 'SELECT * FROM usuarios WHERE username = :username AND password = :password ';
     $comando = $conexion->prepare($sql);
-    // $comando->debugDumpParams();
     // Ejecutar el query
     $comando->execute($datosUsuario);
     // Traer los datos
-    $resultado = $comando->fetchAll();
+    $resultado = $comando->fetchAll(PDO::FETCH_ASSOC);
     $cantidadRegistros = count($resultado);
     if ($cantidadRegistros > 0) {
-        die('Bienvenido');
+        // die('Bienvenido');
+        $_SESSION['usuario_id'] = $resultado[0]['id'];
+        $_SESSION['usuario_nombre'] = $resultado[0]['nombre'];
+        $_SESSION['usuario_username'] = $resultado[0]['username'];
+        header("Location: principal.php");
     } else {
         die('Usuario no existe');
     }
