@@ -1,16 +1,24 @@
 <?php
 $titulo = "Kulturizate | Iniciar Sesion"; 
 
-
 // 
 
-require 'app/conexion.php'; //archivito con la conexion del bd
-
-if (isset($_POST['inputEmail'])) {
+// Iniciar sesion
+session_start();
+require "app/conexion.php";
+// Si el usuario está logeado no puede ver esta página
+if(isset($_SESSION['usuario_id']) == true) {
+    // REDIRECCIONAR a la pagina principal
+    header("Location: principal.php");
+}
+$mensajesError = array();
+// Verificar si el inputUser existe
+if (isset($_POST['inputUser'])) {
     $datosUsuario = array(
         'username' => $_POST['inputUser'],
         'password' => $_POST['inputPassword']
     );
+
     // Preparar el query
     $sql = 'SELECT * FROM usuarios WHERE username = :username AND password = :password ';
     $comando = $conexion->prepare($sql);
@@ -26,11 +34,10 @@ if (isset($_POST['inputEmail'])) {
         $_SESSION['usuario_username'] = $resultado[0]['username'];
         header("Location: principal.php");
     } else {
-        die('Usuario no existe');
+        // Almancenar un mensaje de error para mostrarlo al usuario
+        $mensajesError['usuario_incorrecto'] = "El usuario o la contraseña son incorrectos";
     }
 }
-
-
 require "app/vistas/login.vistas.php";
 ?>  
 
