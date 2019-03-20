@@ -1,5 +1,5 @@
 <?php
 
-function vista()
+function vista();}
 
 ?>

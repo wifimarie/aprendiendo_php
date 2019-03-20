@@ -1,12 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: estudiante
- * Date: 15/3/19
- * Time: 10:21 AM
- */
 session_start();
+require "app/mis_funciones.php";
 // Limpiar el array $_SESSION;
 $_SESSION = array();
+// Destruir la sesion
 session_destroy();
+// Redireccionar al index
 header("Location: index.php");
+die;

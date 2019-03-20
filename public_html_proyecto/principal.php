@@ -15,4 +15,4 @@ if (isset($_SESSION['usuario_id']) == false) {
 echo "Bienvenido {$_SESSION['usuario_nombre']}";
 echo "<a href='logout.php'>Cerrar sesion</a>";
 // Incluir la vista
-require "app/vistas/principal.vista.php";
+require "app/vistas/principal.vistas.php";

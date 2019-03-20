@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <!-- Incluir los estilos -->
-<link rel="stylesheet" href="recursos/css/style.css">
     <link rel="stylesheet" href="recursos/css/bootstrap.css">
     <link rel="shortcut icon" href="recursos/img/icon.ico" type="image/ico">   
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800" rel="stylesheet"> 
@@ -67,7 +66,14 @@ a:hover {
                     <h4 class="mb-4">Inicia sesión</h4>
 <input class="form-control mb-3" type="text" name="inputUser" placeholder="usuario" required autofocus> 
 <input class="form-control mb-3" type="password" name="inputPassword" placeholder="contraseña" required> 
-<input class="btn btn-block- btn-outline-dark mb-2" type="submit" name="u_btn" placeholder="sign in"> 
+<input class="btn btn-block- btn-outline-dark mb-2" type="submit" name="u_btn" placeholder="sign in">
+    <em class="text-danger">
+        <?php
+        if (isset($mensajesError['usuario_incorrecto'])) {
+            echo $mensajesError['usuario_incorrecto'];
+        }
+        ?>
+    </em>
 <br><span>¿No tienes tu cuenta? </span><a class="btn btn-dark" href="registro.php">Regístrate</a>
     </form> 
  </div>
