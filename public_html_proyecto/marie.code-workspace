@@ -1,16 +1,14 @@
 {
-	"folders": [
-		{
-			"path": "C:\\xampp\\htdocs\\aprendiendo_php"
-		}
-	],
+	"folders": [{
+		"path": "C:\\xampp\\htdocs\\aprendiendo_php"
+	}],
 	"settings": {
 		"breadcrumbs.enabled": true,
 		"editor.cursorSmoothCaretAnimation": true,
-		"editor.fontSize": 40,
+		"editor.fontSize": 15,
 		"editor.formatOnSave": true,
 		"editor.formatOnType": true,
-		"editor.lineHeight": 48,
+		"editor.lineHeight": 15,
 		"editor.smoothScrolling": true,
 		"editor.tabCompletion": "on",
 		"emmet.triggerExpansionOnTab": true,

@@ -62,12 +62,13 @@ a:hover {
 <!-- form-->
 <form id="login" class="box" action="login.php" method="post">
 
-<h1><a href="/index.vistas.php" class="text-kulturizate text-decoration-none "><i class="fab fa-kickstarter-k pl-0"></i><b>ulturizate</b></a></h1>
+<h1><a href="index.php" class="text-kulturizate text-decoration-none "><i class="fab fa-kickstarter-k pl-0"></i><b>ulturizate</b></a></h1>
                     <hr>
                     <h4 class="mb-4">Inicia sesión</h4>
 <input class="form-control mb-3" type="text" name="inputUser" placeholder="usuario" required autofocus> 
 <input class="form-control mb-3" type="password" name="inputPassword" placeholder="contraseña" required> 
-<input class="btn btn-block- btn-outline-dark mb-2" type="submit" name="u_btn" placeholder="sign in"> 
+  <button class="btn btn-primary btn-block mb-3" type="submit">Iniciar sesión</button>
+
 <br><span>¿No tienes tu cuenta? </span><a class="btn btn-dark" href="registro.php">Regístrate</a>
     </form> 
  </div>

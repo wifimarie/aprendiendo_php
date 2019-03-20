@@ -13,6 +13,7 @@
     <title>Bandeja de entrada | kulturizate</title>
 </head>
 <body>
+
 <nav class="navbar navbar-light bg-light">
     <div class="container">
         <a class="navbar-brand text-primary" href="#"><i class="fab fa-xing-square"></i> XtudioPlay</a>
@@ -29,13 +30,14 @@
     </div>
 </nav>
 
+
 <!--  Menu  -->
 <div class="shadow-sm">
     <div class="container">
         <nav class="nav mb-4 pt-1 pb-1">
             <a class="nav-link active" href="#">Inicio</a>
             <a class="nav-link" href="#">Mis publicaciones
-                <span class="badge badge-light"><?php echo count($publicaciones); ?></span></a>
+                <span class="badge badge-light"><?php echo count($listadopublicaciones); ?></span></a>
         </nav>
     </div>
 </div>
@@ -66,15 +68,15 @@
 
         <div class="col-md-12">
             <h2 class="font-weight-normal">Tus publicaciones recientes
-                <small class="badge badge-secondary font-weight-light"><?php echo count($publicaciones); ?></small>
+                <small class="badge badge-secondary font-weight-light"><?php echo count($listadopublicaciones); ?></small>
             </h2>
             <hr>
         </div>
 
         <?php
         // Mostrar las publicaciones (si las hay)
-        if (count($publicaciones) > 0) {
-            foreach ($publicaciones as $publicacion) {
+        if (count($listadopublicaciones) > 0) {
+            foreach ($listadopublicaciones as $publicacion) {
                 echo "<div class='col-md-4 mb-3'>
                             <div class='card'>
                                 <div class='card-body'>

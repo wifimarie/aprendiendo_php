@@ -67,7 +67,7 @@ a:hover {
 
                 <!-- form -->
                 <form id="login" action="registro.php" method="post">
-                    <h1><a href="app/vistas/index.vistas.php" class="text-kulturizate text-decoration-none "><i class="fab fa-kickstarter-k pl-0"></i><b>ulturizate</b></a></h1>
+                    <h1><a href="index.php" class="text-kulturizate text-decoration-none "><i class="fab fa-kickstarter-k pl-0"></i><b>ulturizate</b></a></h1>
                     <hr>
                     <h4 class="mb-4">Regístrate</h4>
                     <input class="form-control mb-3" type="text" name="inputName" placeholder="Nombre" required
