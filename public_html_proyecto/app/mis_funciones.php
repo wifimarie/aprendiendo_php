@@ -38,8 +38,23 @@ function comprobarUsuarioExiste($conexion, $correo, $username) {
     return $resultado;
 }
 function selectPublicacionesDelUsuario($conexion, $usuario_id) {
-    return selectPublicacionesDelUsuario;
+    // 1. Preparar el query
+    $comando = $conexion->prepare("SELECT * FROM publicaciones WHERE creado_por = $usuario_id");
+    // 2. Ejecutar el query
+    $comando->execute();
+    // 3. Traer los datos
+    $publicaciones = $comando->fetchAll(PDO::FETCH_ASSOC);
+    return $publicaciones;
 }
-
+//Funcion para llamar 
+function selectCategorias($conexion) {
+     // 1. Preparar el query
+    $comando = $conexion->prepare("SELECT * FROM categorias");
+    // 2. Ejecutar el query
+    $comando->execute();
+    // 3. Traer los datos
+    $publicaciones = $comando->fetchAll(PDO::FETCH_ASSOC);
+    return $categorias;
+}
 ?>
 

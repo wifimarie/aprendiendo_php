@@ -28,6 +28,21 @@ if (isset($_POST['btnCrearPublicacion'])) {
 }
 /* Fin del codigo para guardar */
 /* Traer las publicaciones */
-$listadoPublicaciones = selectPublicacionesDelUsuario($conexion, $_SESSION['usuario_id']);
+
 $titulo = "Crear publicación";
+$listadopublicaciones = selectPublicacionesDelUsuario($conexion, $_SESSION['usuario_id']);
+
+//definir las variables que voy a utilizar en la vista
+
+$categorias = selectCategorias($conexion);
+
+imprimir($categorias);
+
+foreach ($categorias as $categoria){
+
+imprimir($categorias['id']);
+imprimir($categorias['nombre']);
+
+}
+
 require vista("nueva_publicacion");

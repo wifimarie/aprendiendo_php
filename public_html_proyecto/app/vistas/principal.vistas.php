@@ -16,7 +16,7 @@
 
 <nav class="navbar navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand text-primary" href="#"><i class="fab fa-xing-square"></i> XtudioPlay</a>
+        <a class="navbar-brand text-primary" href="#"><i class="fab fa-xing-square"></i> Kulturizate</a>
 
         <form action="" class="form-inline">
             <input type="search" class="form-control form-control-sm mr-1" placeholder="Buscar...">
