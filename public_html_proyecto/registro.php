@@ -35,7 +35,7 @@ try {
         // Validar que el usuario/correo no existan en la base de datos
         $usuariosRegistrados = comprobarUsuarioExiste($conexion, $datosUsuarios['correo'], $datosUsuarios['username']);
         $cantidadUsuariosRegistrados = count($usuariosRegistrados);
-        imprimir($cantidadUsuariosRegistrados);
+        //imprimir($cantidadUsuariosRegistrados);
             if ($cantidadUsuariosRegistrados >= 1) {
                 // Hay usuarios registrados con ese correo o username
                 throw new Exception("Usuario o correo existentes.");

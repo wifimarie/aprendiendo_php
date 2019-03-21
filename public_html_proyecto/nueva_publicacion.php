@@ -3,8 +3,11 @@ session_start();
 require "app/mis_funciones.php";
 require "app/conexion.php";
 /* Codigo para guardar la publicacion */
+
 //  Verificar que el usuario haya hecho click en el boton
+
 if (isset($_POST['btnCrearPublicacion'])) {
+
     // Guardar los datos en un array para insertarlos a la base de datos
     $publicacion = array(
         'titulo' => $_POST['inputTitulo'],
@@ -25,8 +28,28 @@ if (isset($_POST['btnCrearPublicacion'])) {
     } else {
         echo "Los datos no fueron insertados.";
     }
+
+    // Subir el archivo
+    if (isset($_FILES['inputArchivo'])) {
+        $destino = "C:\\xampp\\htdocs\\learning_php\\public_html_proyecto\\recursos\\archivos";
+        $nombreArchivo = $_FILES['inputArchivo']['name'];
+        $nombreArchivoTemp = $_FILES['inputArchivo']['tmp_name'];
+
+        // Concatenarle el nombre real del archivo a la variable destino
+        $destino .= DIRECTORY_SEPARATOR . $nombreArchivo;
+                                                      
+        $subido = move_uploaded_file($nombreArchivoTemp, $destino);
+
+        if ($subido == true) {
+            echo "El archivo se subio correctamente";
+        } else {
+            echo "El archivo no se subio correctamente";
+        }
+    }
 }
 /* Fin del codigo para guardar */
+
+
 /* Traer las publicaciones */
 
 $titulo = "Crear publicación";
@@ -36,13 +59,5 @@ $listadopublicaciones = selectPublicacionesDelUsuario($conexion, $_SESSION['usua
 
 $categorias = selectCategorias($conexion);
 
-imprimir($categorias);
-
-foreach ($categorias as $categoria){
-
-echo($categorias['id']);
-echo($categorias['nombre']);
-
-}
 
 require vista("nueva_publicacion");
