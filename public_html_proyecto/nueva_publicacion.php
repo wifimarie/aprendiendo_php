@@ -40,8 +40,8 @@ imprimir($categorias);
 
 foreach ($categorias as $categoria){
 
-imprimir($categorias['id']);
-imprimir($categorias['nombre']);
+echo($categorias['id']);
+echo($categorias['nombre']);
 
 }
 
