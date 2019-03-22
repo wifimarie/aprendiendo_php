@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-03-2019 a las 17:13:43
+-- Tiempo de generación: 22-03-2019 a las 14:27:25
 -- Versión del servidor: 10.1.37-MariaDB
 -- Versión de PHP: 7.2.13
 
@@ -312,6 +312,7 @@ INSERT INTO `country` (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUE
 --
 
 CREATE TABLE `publicaciones` (
+  `id` int(11) NOT NULL,
   `titulo` varchar(100) COLLATE utf8_spanish2_ci NOT NULL,
   `descripcion` text COLLATE utf8_spanish2_ci NOT NULL,
   `id_categoria` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,
@@ -320,6 +321,14 @@ CREATE TABLE `publicaciones` (
   `creado_en` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `eliminado` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `publicaciones`
+--
+
+INSERT INTO `publicaciones` (`id`, `titulo`, `descripcion`, `id_categoria`, `nombre_archivo`, `creado_por`, `creado_en`, `eliminado`) VALUES
+(1, 'gfjhgjh', 'jhfg', '1', '', 4, '2019-03-22 13:01:12', 0),
+(7, 'tryt', 'ytut', '1', '', 4, '2019-03-22 13:26:05', 0);
 
 -- --------------------------------------------------------
 
@@ -420,6 +429,12 @@ ALTER TABLE `country`
   ADD PRIMARY KEY (`iso`);
 
 --
+-- Indices de la tabla `publicaciones`
+--
+ALTER TABLE `publicaciones`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `registro`
 --
 ALTER TABLE `registro`
@@ -445,6 +460,12 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT de la tabla `publicaciones`
+--
+ALTER TABLE `publicaciones`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
