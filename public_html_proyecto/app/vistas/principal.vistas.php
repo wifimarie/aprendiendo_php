@@ -16,7 +16,7 @@
 
 <nav class="navbar navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand text-primary" href="#"><i class="fab fa-xing-square"></i> Kulturizate</a>
+        <a class="navbar-brand text-primary" href="#"><i class="fab fa-kickstarter-k pl-0"></i>ulturizate</a>
 
         <form action="" class="form-inline">
             <input type="search" class="form-control form-control-sm mr-1" placeholder="Buscar...">
@@ -83,6 +83,7 @@
                                 <h5 class='card-title'>#{$publicacion['id']} {$publicacion['titulo']}</h5>
                                 <h6 class='card-subtitle mb-2 text-muted'>{$publicacion['id_categoria']}</h6>
                                 <p class='card-text'>{$publicacion['descripcion']}</p>
+                                <p class='card-text'>{$publicacion['creado_por']}</p>
                                 </div>
                             </div>
                         </div>";

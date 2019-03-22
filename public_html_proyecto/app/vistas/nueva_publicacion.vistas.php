@@ -14,9 +14,26 @@
     <title>Bandeja de entrada | kulturizate</title>
 </head>
 <body>
-   
+   <nav class="navbar navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand text-primary" href="#"><i class="fab fa-kickstarter-k pl-0"></i>ulturizate</a>
+
+        <form action="" class="form-inline">
+            <input type="search" class="form-control form-control-sm mr-1" placeholder="Buscar...">
+            <button type="submit" class="btn btn-sm btn-outline-primary" name="btnBuscar">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+
+        <a href="logout.php" class="text-danger"></i> Cerrar sesión</a>
+
+    </div>
+</nav>
+<!-- aqui termina el navbar -->
+
 <div class="row">
-    <form action="" method="post" class="col-md-3">
+
+    <form action="" method="post" class="col-md-3 mt-5">
         <h3>Crear publicacion</h3>
         <hr>
         <input class="form-control" type="text" name="inputTitulo" placeholder="Titulo" required>
@@ -42,6 +59,7 @@
       <th scope="col">Titulo</th>
       <th scope="col">Descripcion</th>
       <th scope="col">Categoria</th>
+      <th scope="col">Creado_por</th>
     </tr>
   </thead>
   <tbody>
@@ -53,6 +71,7 @@
                 <td>{$publicacion['titulo']}</td>
                 <td>{$publicacion['descripcion']}</td>
                 <td>{$publicacion['id_categoria']}</td>
+                <td>{$publicacion['creado_por']}</td>
                 
             </tr>";
     }
