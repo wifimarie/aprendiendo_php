@@ -13,7 +13,8 @@ if (isset($_POST['btnCrearPublicacion'])) {
         'titulo' => $_POST['inputTitulo'],
         'descripcion' => $_POST['inputDescripcion'],
         'id_categoria' => $_POST['selectCategoria'],
-        'nombre_archivo' => $_POST['inputArchivo']
+        'nombre_archivo' => "",
+        'creado_por' => $_POST['usuario_id']
     );
     // 1. Preparar el query
     $sql = "INSERT INTO publicaciones(titulo, descripcion, id_categoria, nombre_archivo) 
@@ -53,7 +54,7 @@ if (isset($_POST['btnCrearPublicacion'])) {
 /* Traer las publicaciones */
 
 $titulo = "Crear publicación";
-$listadopublicaciones = selectPublicacionesDelUsuario($conexion, $_SESSION['usuario_id']);
+$listadoPublicaciones = selectPublicacionesDelUsuario($conexion, $_SESSION['usuario_id']);
 
 //definir las variables que voy a utilizar en la vista
 

@@ -1,20 +1,22 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.2.2
--- http://www.phpmyadmin.net
+-- version 4.8.4
+-- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-03-2019 a las 06:35:49
--- Versión del servidor: 5.5.27
--- Versión de PHP: 5.4.7
+-- Tiempo de generación: 21-03-2019 a las 17:13:43
+-- Versión del servidor: 10.1.37-MariaDB
+-- Versión de PHP: 7.2.13
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Base de datos: `marie_database`
@@ -23,16 +25,39 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `categorias`
+--
+
+CREATE TABLE `categorias` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(60) COLLATE utf32_spanish2_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf32 COLLATE=utf32_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `categorias`
+--
+
+INSERT INTO `categorias` (`id`, `nombre`) VALUES
+(1, 'ocio'),
+(2, 'musica'),
+(3, 'entretenimiento'),
+(4, 'chelcha'),
+(5, 'salud'),
+(6, 'gastronomia'),
+(7, 'cultura');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `country`
 --
 
-CREATE TABLE IF NOT EXISTS `country` (
+CREATE TABLE `country` (
   `iso` char(2) COLLATE utf8_spanish2_ci NOT NULL,
   `name` varchar(80) COLLATE utf8_spanish2_ci NOT NULL,
   `printable_name` varchar(80) COLLATE utf8_spanish2_ci NOT NULL,
   `iso3` char(3) COLLATE utf8_spanish2_ci DEFAULT NULL,
-  `numcode` smallint(6) DEFAULT NULL,
-  PRIMARY KEY (`iso`)
+  `numcode` smallint(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
@@ -80,7 +105,7 @@ INSERT INTO `country` (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUE
 ('CD', 'CONGO, THE DEMOCRATIC REPUBLIC OF THE', 'Congo, the Democratic Republic of the', 'COD', 180),
 ('CF', 'CENTRAL AFRICAN REPUBLIC', 'Central African Republic', 'CAF', 140),
 ('CG', 'CONGO', 'Congo', 'COG', 178),
-('CI', 'COTE D''IVOIRE', 'Cote D''Ivoire', 'CIV', 384),
+('CI', 'COTE D\'IVOIRE', 'Cote D\'Ivoire', 'CIV', 384),
 ('CK', 'COOK ISLANDS', 'Cook Islands', 'COK', 184),
 ('CL', 'CHILE', 'Chile', 'CHL', 152),
 ('CM', 'CAMEROON', 'Cameroon', 'CMR', 120),
@@ -155,12 +180,12 @@ INSERT INTO `country` (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUE
 ('KI', 'KIRIBATI', 'Kiribati', 'KIR', 296),
 ('KM', 'COMOROS', 'Comoros', 'COM', 174),
 ('KN', 'SAINT KITTS AND NEVIS', 'Saint Kitts and Nevis', 'KNA', 659),
-('KP', 'KOREA, DEMOCRATIC PEOPLE''S REPUBLIC OF', 'Korea, Democratic People''s Republic of', 'PRK', 408),
+('KP', 'KOREA, DEMOCRATIC PEOPLE\'S REPUBLIC OF', 'Korea, Democratic People\'s Republic of', 'PRK', 408),
 ('KR', 'KOREA, REPUBLIC OF', 'Korea, Republic of', 'KOR', 410),
 ('KW', 'KUWAIT', 'Kuwait', 'KWT', 414),
 ('KY', 'CAYMAN ISLANDS', 'Cayman Islands', 'CYM', 136),
 ('KZ', 'KAZAKHSTAN', 'Kazakhstan', 'KAZ', 398),
-('LA', 'LAO PEOPLE''S DEMOCRATIC REPUBLIC', 'Lao People''s Democratic Republic', 'LAO', 418),
+('LA', 'LAO PEOPLE\'S DEMOCRATIC REPUBLIC', 'Lao People\'s Democratic Republic', 'LAO', 418),
 ('LB', 'LEBANON', 'Lebanon', 'LBN', 422),
 ('LC', 'SAINT LUCIA', 'Saint Lucia', 'LCA', 662),
 ('LI', 'LIECHTENSTEIN', 'Liechtenstein', 'LIE', 438),
@@ -286,11 +311,14 @@ INSERT INTO `country` (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUE
 -- Estructura de tabla para la tabla `publicaciones`
 --
 
-CREATE TABLE IF NOT EXISTS `publicaciones` (
+CREATE TABLE `publicaciones` (
   `titulo` varchar(100) COLLATE utf8_spanish2_ci NOT NULL,
   `descripcion` text COLLATE utf8_spanish2_ci NOT NULL,
   `id_categoria` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,
-  `nombre_archivo` varchar(50) COLLATE utf8_spanish2_ci NOT NULL
+  `nombre_archivo` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
+  `creado_por` int(10) NOT NULL DEFAULT '0',
+  `creado_en` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `eliminado` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 -- --------------------------------------------------------
@@ -299,8 +327,8 @@ CREATE TABLE IF NOT EXISTS `publicaciones` (
 -- Estructura de tabla para la tabla `registro`
 --
 
-CREATE TABLE IF NOT EXISTS `registro` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `registro` (
+  `id` int(11) NOT NULL,
   `Nombre` varchar(15) COLLATE utf8_spanish2_ci NOT NULL,
   `Apellido` varchar(15) COLLATE utf8_spanish2_ci NOT NULL,
   `Fecha_de_nacimiento` date NOT NULL,
@@ -309,9 +337,8 @@ CREATE TABLE IF NOT EXISTS `registro` (
   `password` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,
   `Genero` varchar(15) COLLATE utf8_spanish2_ci NOT NULL,
   `Pais` varchar(12) COLLATE utf8_spanish2_ci NOT NULL,
-  `Estado` varchar(15) COLLATE utf8_spanish2_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci AUTO_INCREMENT=3 ;
+  `Estado` varchar(15) COLLATE utf8_spanish2_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
 -- Volcado de datos para la tabla `registro`
@@ -327,13 +354,12 @@ INSERT INTO `registro` (`id`, `Nombre`, `Apellido`, `Fecha_de_nacimiento`, `Corr
 -- Estructura de tabla para la tabla `registroweb`
 --
 
-CREATE TABLE IF NOT EXISTS `registroweb` (
-  `u_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `registroweb` (
+  `u_id` int(11) NOT NULL,
   `u_name` varchar(255) COLLATE utf8_spanish2_ci NOT NULL,
   `u_email` varchar(255) COLLATE utf8_spanish2_ci NOT NULL,
-  `u_pass` varchar(255) COLLATE utf8_spanish2_ci NOT NULL,
-  PRIMARY KEY (`u_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci AUTO_INCREMENT=13 ;
+  `u_pass` varchar(255) COLLATE utf8_spanish2_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
 -- Volcado de datos para la tabla `registroweb`
@@ -359,14 +385,13 @@ INSERT INTO `registroweb` (`u_id`, `u_name`, `u_email`, `u_pass`) VALUES
 -- Estructura de tabla para la tabla `usuarios`
 --
 
-CREATE TABLE IF NOT EXISTS `usuarios` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `usuarios` (
+  `id` int(10) NOT NULL,
   `nombre` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
   `correo` varchar(70) COLLATE utf8_spanish2_ci NOT NULL,
   `username` varchar(16) COLLATE utf8_spanish2_ci NOT NULL,
-  `password` text COLLATE utf8_spanish2_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci AUTO_INCREMENT=4 ;
+  `password` text COLLATE utf8_spanish2_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`
@@ -375,7 +400,71 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 INSERT INTO `usuarios` (`id`, `nombre`, `correo`, `username`, `password`) VALUES
 (1, 'marie', 'marie@hotmail.com', 'aticboy', '123456'),
 (2, 'mario', 'mario@correo.com', 'chankletita', '123456'),
-(3, 'meri', 'meri@meri.com', 'merilovesyou', '123456');
+(3, 'meri', 'meri@meri.com', 'merilovesyou', '123456'),
+(4, 'miriam', 'miriam@miriam.com', 'miriam', '$2y$10$ooCSxlOp/6xG1ugxzBjTAeN5U2kDtGeIZwHn9qS1gyS9mf5aePa1S');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `categorias`
+--
+ALTER TABLE `categorias`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `country`
+--
+ALTER TABLE `country`
+  ADD PRIMARY KEY (`iso`);
+
+--
+-- Indices de la tabla `registro`
+--
+ALTER TABLE `registro`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `registroweb`
+--
+ALTER TABLE `registroweb`
+  ADD PRIMARY KEY (`u_id`);
+
+--
+-- Indices de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `categorias`
+--
+ALTER TABLE `categorias`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT de la tabla `registro`
+--
+ALTER TABLE `registro`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de la tabla `registroweb`
+--
+ALTER TABLE `registroweb`
+  MODIFY `u_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

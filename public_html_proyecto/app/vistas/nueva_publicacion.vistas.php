@@ -14,6 +14,7 @@
     <title>Bandeja de entrada | kulturizate</title>
 </head>
 <body>
+   
 <div class="row">
     <form action="" method="post" class="col-md-3">
         <h3>Crear publicacion</h3>
@@ -52,6 +53,7 @@
                 <td>{$publicacion['titulo']}</td>
                 <td>{$publicacion['descripcion']}</td>
                 <td>{$publicacion['id_categoria']}</td>
+                
             </tr>";
     }
   ?>
