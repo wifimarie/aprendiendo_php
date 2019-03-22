@@ -71,8 +71,7 @@
                 <td>{$publicacion['titulo']}</td>
                 <td>{$publicacion['descripcion']}</td>
                 <td>{$publicacion['id_categoria']}</td>
-                <td>{$publicacion['creado_por']}</td>
-                
+                <td>{$publicacion['creado_por']}</td>              
             </tr>";
     }
   ?>

@@ -14,7 +14,7 @@ function manejoErrores($codigo, $mensaje, $archivo, $linea) {
 }
 set_error_handler("manejoErrores");
 function imprimir($valor_recibido) {
-    var_dump(imprimir());
+   
 }
   
 function vista($nombre) {
