@@ -56,6 +56,9 @@ if (isset($_POST['btnCrearPublicacion'])) {
 $titulo = "Crear publicación";
 $listadoPublicaciones = selectPublicacionesDelUsuario($conexion, $_SESSION['usuario_id']);
 
+imprimir($listadoPublicaciones);
+
+
 //definir las variables que voy a utilizar en la vista
 
 $categorias = selectCategorias($conexion);
