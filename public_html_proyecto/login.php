@@ -2,6 +2,7 @@
 session_start();
 require "app/mis_funciones.php";
 require "app/conexion.php";
+$titulo = "Kulturizate | inicia sesión";
 
 // Si el usuario está logeado no puede ver esta página
 if (isset($_SESSION['usuario_id']) == true) {
