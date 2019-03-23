@@ -69,6 +69,14 @@ a:hover {
 <input class="form-control mb-3" type="password" name="inputPassword" placeholder="contraseña" required> 
   <button class="btn btn-primary btn-block mb-3" type="submit">Iniciar sesión</button>
 
+<!-- Error para avisarle al usuario -->
+<em class="text-danger">
+<?php 
+if (isset($mensajesError['usuario_incorrecto'])) {
+    echo $mensajesError['usuario_incorrecto'];
+    }
+?>
+</em>
 <br><span>¿No tienes tu cuenta? </span><a class="btn btn-dark" href="registro.php">Regístrate</a>
     </form> 
  </div>

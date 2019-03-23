@@ -14,6 +14,7 @@ function manejoErrores($codigo, $mensaje, $archivo, $linea) {
 }
 set_error_handler("manejoErrores");
 function imprimir($valor_recibido) {
+   
 }
   
 function vista($nombre) {
@@ -53,7 +54,7 @@ function selectCategorias($conexion) {
     // 2. Ejecutar el query
     $comando->execute();
     // 3. Traer los datos
-    $publicaciones = $comando->fetchAll(PDO::FETCH_ASSOC);
+    $categorias = $comando->fetchAll(PDO::FETCH_ASSOC);
     return $categorias;
 }
 ?>
