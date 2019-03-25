@@ -40,7 +40,7 @@ function comprobarUsuarioExiste($conexion, $correo, $username) {
 }
 function selectPublicacionesDelUsuario($conexion, $usuario_id) {
     // 1. Preparar el query
-    $comando = $conexion->prepare("SELECT * FROM publicaciones WHERE creado_por = $usuario_id");
+    $comando = $conexion->prepare("SELECT * FROM `publicaciones` INNER JOIN usuarios u ON creado_por=u.id INNER JOIN categorias cat ON id_categoria=cat.id where u.id = $usuario_id AND creado_por = $usuario_id");
     // 2. Ejecutar el query
     $comando->execute();
     // 3. Traer los datos

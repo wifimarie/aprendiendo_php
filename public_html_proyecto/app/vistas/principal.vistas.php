@@ -48,6 +48,7 @@
         <h2 class="font-weight-normal">Bienvenido <?php echo $_SESSION['usuario_nombre']; ?> a tu página principal.</h2>
         <p class="lead">Empieza a disfrutar de tu espacio.</p>
         <a href='nueva_publicacion.php' class='btn btn-primary'><i class='fas fa-plus mr-1'></i> Crear publicación</a>
+       <br><a href='nueva_categoria.php' class='btn btn-dark mt-3'><i class='fas fa-plus mr-1'></i> Crear categoría</a>
     </div>
 </div>
 
@@ -80,10 +81,12 @@
                 echo "<div class='col-md-4 mb-3'>
                             <div class='card'>
                                 <div class='card-body'>
+                                <audio src='recursos/archivos/marie.mp3' controls></audio>
+                                <img class='card-img' src='recursos/archivos/{$publicacion['nombre_archivo']}' alt='Titulo de la imagen' />
                                 <h5 class='card-title'>#{$publicacion['id']} {$publicacion['titulo']}</h5>
-                                <h6 class='card-subtitle mb-2 text-muted'>{$publicacion['id_categoria']}</h6>
+                                <h6 class='card-subtitle mb-2 text-muted'>{$publicacion['nombre']}</h6>
                                 <p class='card-text'>{$publicacion['descripcion']}</p>
-                                <p class='card-text'>{$publicacion['creado_por']}</p>
+                                <p class='card-text'>{$publicacion['username']}</p>
                                 </div>
                             </div>
                         </div>";

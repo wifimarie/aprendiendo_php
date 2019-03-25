@@ -33,7 +33,7 @@
 
 <div class="row">
 
-    <form action="" method="post" class="col-md-3 mt-5">
+    <form action="" method="post" class="col-md-3 mt-5" enctype="multipart/form-data">
         <h3>Crear publicacion</h3>
         <hr>
         <input class="form-control" type="text" name="inputTitulo" placeholder="Titulo" required>

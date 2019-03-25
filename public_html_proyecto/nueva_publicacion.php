@@ -38,11 +38,24 @@ if (isset($_POST['btnCrearPublicacion'])) {
 
         // Concatenarle el nombre real del archivo a la variable destino
         $destino .= DIRECTORY_SEPARATOR . $nombreArchivo;
-                                                      
+                                                     
         $subido = move_uploaded_file($nombreArchivoTemp, $destino);
 
         if ($subido == true) {
             echo "El archivo se subio correctamente";
+            
+            // Obtener el ultimo id insertado en la tabla de publicaciones
+            $ultimoIdInsertado = $conexion->lastInsertId();
+            
+
+            //Obtener el ultimo id insertado en la tabla de publicaciones
+            
+            $sqlUpdate = "UPDATE publicaciones SET nombre_archivo = '$nombreArchivo' WHERE id = $ultimoIdInsertado";
+            $comando = $conexion->prepare($sqlUpdate);
+            $comando->execute();
+            $resultado = $comando->rowCount();     
+
+
         } else {
             echo "El archivo no se subio correctamente";
         }
