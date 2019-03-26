@@ -50,7 +50,9 @@
         <button class="btn btn-primary" name="btnCrearPublicacion">Crear publicacion</button>
     </form>
     </div>
-
+<!-- BOTON PARA VOLVER A LA PAGINA ANTERIOR -->
+        <button class="btn btn-outline-dark mt-5 mb-5" name="volver"><i class="fas fa-arrow-left p-2 btn-back"></i><a href="principal.php">Volver</a></button>
+<br>
     <!-- Mostrar los datos de la base de datos -->
     <table class="table">
   <thead>
@@ -70,8 +72,8 @@
                 <th>{$publicacion['id']}</th>
                 <td>{$publicacion['titulo']}</td>
                 <td>{$publicacion['descripcion']}</td>
-                <td>{$publicacion['id_categoria']}</td>
-                <td>{$publicacion['creado_por']}</td>              
+                <td>{$publicacion['nombre']}</td>
+                <td>{$publicacion['username']}</td>              
             </tr>";
     }
   ?>

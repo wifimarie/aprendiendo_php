@@ -50,7 +50,7 @@ function selectPublicacionesDelUsuario($conexion, $usuario_id) {
 //Funcion para llamar 
 function selectCategorias($conexion) {
      // 1. Preparar el query
-    $comando = $conexion->prepare("SELECT * FROM categorias");
+    $comando = $conexion->prepare("SELECT * FROM categorias WHERE eliminado = false");
     // 2. Ejecutar el query
     $comando->execute();
     // 3. Traer los datos

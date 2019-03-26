@@ -11,6 +11,17 @@
         crossorigin="anonymous">
     <meta name="theme-color" content="#222221" ;> <!-- color del meta en google chrome-->
     <title>Bandeja de entrada | kulturizate</title>
+    <style>
+    .jumbotron {
+    padding: 5rem 1rem;
+    margin-bottom: 2rem;
+    background-image: url('http://coreanizada.com/wp-content/uploads/2018/09/brdnk-production-739024-unsplash-1024x684.jpg');
+    border-radius: 0.3rem;
+    opacity: 1px;
+    color: white;
+    text-align: center;
+    }
+    </style>
 </head>
 <body>
 
@@ -45,8 +56,8 @@
 <!--  Saludo  -->
 <div class="jumbotron">
     <div class="container">
-        <h2 class="font-weight-normal">Bienvenido <?php echo $_SESSION['usuario_nombre']; ?> a tu página principal.</h2>
-        <p class="lead">Empieza a disfrutar de tu espacio.</p>
+        <h2 class="font-weight-normal">Bienvenid@ <?php echo $_SESSION['usuario_nombre']; ?> a tu página principal ¡Comparte tus ideas!</h2>
+        <p class="lead">Comienza a publicar tus ideas y conocimientos respecto a la cultura!</p>
         <a href='nueva_publicacion.php' class='btn btn-primary'><i class='fas fa-plus mr-1'></i> Crear publicación</a>
        <br><a href='nueva_categoria.php' class='btn btn-dark mt-3'><i class='fas fa-plus mr-1'></i> Crear categoría</a>
     </div>
