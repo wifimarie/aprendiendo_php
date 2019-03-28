@@ -1,9 +1,22 @@
-# aprendiendo_php
+#Documentación de PHP
 
-Este repositorio es para el aprendizaje de PHP.
+Este repositorio es para el aprendisaje de PHP.
 
-Posee la siguiente estructuras de archivos:
+Posee la siguiente estructura de archivos:
 
--prácticas: en este folder van las practicas de php que se realicen.
+-Practicas: en este folder van las practicas PHP que se realicen. -Public_html_proyecto: Aqui van los archivos del proyecto PHP que se subirán mediante FTP.
+Documentación de PHP
 
--public-html_proyecto: aqui van los archivos del proyecto php que se subiran mediante ftp.
+Este repositorio es para el
+
+aprendizaje de PHP.
+
+Posee la siguiente estructura de archivos:
+
+    Practicas: en este folder van las practicas PHP que se realicen.
+
+    Public_html_proyecto: Aqui van los archivos del proyecto PHP que se subirán mediante FTP.
+
+#Introducción a PHP
+
+PHP, acrónimo recursivo en inglés de PHP: Hypertext Preprocessor (preprocesador de hipertexto), es un lenguaje de programación de propósito general de código del lado del servidor originalmente diseñado para el desarrollo web de contenido dinámico.
